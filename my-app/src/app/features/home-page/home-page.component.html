@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="mainContainer" >
+      <div class="header">
+        <div class="topnav">
+          <img
+            src="https://media.licdn.com/dms/image/C4E0BAQHnZM8XBzPakg/company-logo_200_200/0/1629873202301?e=2147483647&v=beta&t=8nvWLIqsg_F0MkFar7UJhKWbAXTauN_vBmRq8QEssVE"
+            width="75"
+            height="75"
+          />
+
+          <div style="padding-right: 3rem;"><a class="active" href="#home">Login</a>
+          <a href="#contact">Contact</a>
+          <a href="abous-us">About us</a></div>
+          </div>
+        </div>
+    
+      <div class="mainContent" style="height: 100%;">
+        <!-- <div id="sidenav"> -->
+          <!-- <div class="sidenav">
+
+            <button class="dropdown-btn">
+              FX Rates
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+              <a href="https://finance.yahoo.com/quote/INR=X/" target="_blank">USD/INR</a>
+              <a href="https://finance.yahoo.com/quote/GBPINR=X/" target="_blank">GBP/INR</a>
+              <a href="https://finance.yahoo.com/quote/JPYINR=X/" target="_blank">JPY/INR</a>
+              
+
+            </div>
+            <button class="dropdown-btn" >
+              Interest Rates
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+
+              <button class="dropdown-btn">
+                MCLR
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="#">MCLR Dashboard</a>
+                <a href="#">MCLR Latest</a>
+                <a href="#">MCLR Bank Master</a>
+                <a href="#">MCLR Tenor Wise</a>
+                <a href="#">MCLR Comparision</a>
+                <a href="#">MCLR History</a>
+                <a href="#">MCLR Company Specific</a>
+                <a href="#">MCLR Rate Download</a>
+                <a href="#">Download MIBOR Rate</a>
+  
+              </div>
+
+
+              <a href="#">MIBOR Rate</a>
+              <a href="#">RBI Repo Rate</a>
+              <a href="#">T-Bill Rate</a>
+            </div>
+            <button class="dropdown-btn">
+              Securities
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+              <button class="dropdown-btn">
+                MCLR
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="#">Sebi Category</a>
+                <a href="#">Fund House</a>
+                <a href="#">L1 Scheme</a>
+                <a href="#">L2 Scheme</a>
+                <a href="#">Upload NAV Rate</a>
+                <a href="#">Portfoilio Data Management</a>
+                <a href="#">Scheme Qualification</a>
+                <a href="#">Exception Report</a>
+                <a href="#">Scheme AUM Information</a>
+  
+              </div>
+              <a href="#">Equity</a>
+            </div>
+          </div> -->
+          <!-- <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                FX Rates
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <span><a routerLink="usdinr">USD/INR</a></span>
+            <p>USD INR</p>
+            <p>USD INR</p>
+            <p>USD INR</p>
+            <span><a routerLink="about-us">About us</a></span>
+
+          </mat-expansion-panel> -->
+
+
+
+          <mat-sidenav-container class="example-container" *ngIf="shouldRun" style="height: 100%;width: 100%;">
+            
+            <mat-sidenav #sidenav mode="side" opened style="width: 20%;" >
+              
+            <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                FX Rates
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <span><a routerLink="usdinr">USD/INR</a></span><br>
+            <span><a routerLink="usdinr">GBP/INR</a></span><br>
+            <span><a routerLink="usdinr">JPY/INR</a></span><br>
+
+            <!-- <span><a routerLink="about-us">About us</a></span> -->
+
+          </mat-expansion-panel>
+
+
+          
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Interest Rates
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+   
+            
+            
+            <span><a routerLink="usdinr">MCLR</a></span><br>
+            <span><a routerLink="usdinr">MIBOR Rates</a></span><br>
+            <span><a routerLink="usdinr">RBI Repo rate</a></span><br>
+            <span><a routerLink="usdinr">T-Bill Rate</a></span><br>
+
+          </mat-expansion-panel>
+
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Securities
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <span><a routerLink="usdinr">Mutual Funds</a></span><br>
+            <span><a routerLink="usdinr">Equity</a></span><br>
+        
+          </mat-expansion-panel>
+
+
+
+            </mat-sidenav>
+          
+            <mat-sidenav-content style="height:100%;width:100%">
+
+                <router-outlet></router-outlet>
+    
+            </mat-sidenav-content>
+          </mat-sidenav-container>
+          
+          
+          
+         
+          
+
+        <!-- </div> -->
+      
+
+      </div>
+    </div>
+
+   
+   
+   
+    
+  </body>
+</html>
